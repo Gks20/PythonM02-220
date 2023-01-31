@@ -1,0 +1,41 @@
+# BugReport-6.2
+
+# Break was not present Line 10 / *Line 15
+
+**Steps to produce**
+
+guess_me = 7
+start = 1
+
+while True:
+    if start < guess_me:
+        print('too low')
+    elif start == guess_me:
+        print('found it!')
+
+    elif start > guess_me:
+        print('oops')
+        break
+
+    start += 1
+
+**Expected Results**
+
+too low
+too low
+too low
+too low
+too low
+too low
+found it!
+
+**Actual Results**
+
+too low
+too low
+too low
+too low
+too low
+too low
+found it!
+oops
